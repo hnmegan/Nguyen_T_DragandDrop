@@ -68,9 +68,9 @@
             console.log('you dragged: ', draggedElement);
             
             //add the image to the drop zone
-           
-            e.target.appendChild(document.querySelector(`#${draggedElement}`));
-        
+           if (zone.childElementCount == 0) {
+                e.target.appendChild(document.querySelector(`#${draggedElement}`));
+            }
         });
     })
     
